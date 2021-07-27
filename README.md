@@ -6,7 +6,8 @@ Packages install
 - djangorestframework_jsonapi
 - django-filter
 - pytest-django
--
+- coreapi-
+
 
 ```bash
 mkdir proj_root
@@ -142,3 +143,6 @@ urlpatterns = [
 When testing models test the field attributes, no need to test the model properties
 We need to test the views further status codes, responses....but this is 
 integration. Do we need unit tests without this....
+
+## Authentication
+https://github.com/app-generator/boilerplate-code-django-dashboard
