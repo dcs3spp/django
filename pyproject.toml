@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "source"
+version = "0.1.0"
+description = ""
+authors = ["Simon Pears <sppears18@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Django = "^3.2.5"
+djangorestframework = "^3.12.4"
+djangorestframework-jsonapi = "^4.2.1"
+django-filter = "^2.4.0"
+uvicorn = "^0.14.0"
+coreapi = "^2.3.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+pytest-django = "^4.4.0"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "source.main.settings"
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
