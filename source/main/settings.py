@@ -27,8 +27,6 @@ if SECRET_KEY is None:
     print("Please configure DJANGO_SECRET_KEY environment variable")
     sys.exit(1)
 
-SECRET_KEY = 'django-insecure-93wjrt4_9p2pbw1^)t1+gzti%*+ytp6u+-pftc)kg(+i83&yp-'
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
