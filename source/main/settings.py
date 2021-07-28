@@ -37,6 +37,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'local.api.apps.LocalApiConfig',
+    'local.authentication.apps.AuthConfig',
+    'local.pages.apps.PagesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -58,8 +60,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'main.urls'
-LOGIN_REDIRECT_URL = "home"   # Route defined in pages/urls.py
-LOGOUT_REDIRECT_URL = "home"  # Route defined in pages/urls.py
+# LOGIN_REDIRECT_URL = "home"   # Route defined in pages/urls.py
+# LOGOUT_REDIRECT_URL = "home"  # Route defined in pages/urls.py
 TEMPLATE_DIR = os.path.join(CORE_DIR, "main/templates")  # ROOT dir for templates
 
 TEMPLATES = [
