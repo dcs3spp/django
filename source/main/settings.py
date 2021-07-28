@@ -32,7 +32,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -60,15 +59,10 @@ MIDDLEWARE = [
 ]
 
 if DEBUG:
-    print("Enabling the debug toolbar")
     INTERNAL_IPS = ('127.0.0.1', 'localhost',)
-    MIDDLEWARE += (
-        'debug_toolbar.middleware.DebugToolbarMiddleware',
-    )
+    MIDDLEWARE = ['debug_toolbar.middleware.DebugToolbarMiddleware'] + MIDDLEWARE
 
-    INSTALLED_APPS += (
-        'debug_toolbar',
-    )
+    INSTALLED_APPS += ['debug_toolbar']
 
     DEBUG_TOOLBAR_PANELS = [
         'debug_toolbar.panels.versions.VersionsPanel',
@@ -166,7 +160,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(CORE_DIR, 'main/static'),
 )
-STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
