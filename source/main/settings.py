@@ -93,12 +93,11 @@ ROOT_URLCONF = 'main.urls'
 LOGIN_REDIRECT_URL = "home"   # Route defined in pages/urls.py
 LOGOUT_REDIRECT_URL = "home"  # Route defined in pages/urls.py
 TEMPLATE_DIR = os.path.join(CORE_DIR, "main/templates")  # ROOT dir for templates
-ACCOUNTS_DIR = os.path.join(CORE_DIR, "main/templates/accounts")
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR, ACCOUNTS_DIR],
+        'DIRS': [TEMPLATE_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
